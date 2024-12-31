@@ -1,0 +1,46 @@
+{
+	"schemaVersion": 1,
+	"id": "raphscore",
+	"version": "${version}",
+	"name": "Raph's Core",
+	"description": "An extension to the default Vanilla experience.",
+	"authors": [
+		"Raphaël M."
+	],
+	"contact": {
+		"sources": "https://github.com/RaphProductions/raphscore"
+	},
+	"license": "MIT",
+	"icon": "assets/raphscore/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "fr.raphm.raphscore.RaphsCore",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "fr.raphm.raphscore.RaphsCoreClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"raphscore.mixins.json",
+		{
+			"config": "raphscore.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+	}
+}
